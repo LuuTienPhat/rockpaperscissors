@@ -49,6 +49,12 @@ html, body {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
+.result {
+    position: absolute;
+    font-size: 30px;
+    top: 57%;
+}
+
 .team {
     font-size: 30px;
 }

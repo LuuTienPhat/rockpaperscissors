@@ -4,6 +4,7 @@ const paper = document.getElementById("paper");
 const guestGesture = document.getElementById("guest-gesture");
 const guestScore = document.getElementById("guest-score");
 const homeScore = document.getElementById("home-score");
+const result = document.getElementsByClassName("result")[0];
 
 function choose() {
     
@@ -34,43 +35,43 @@ function play(playerChoice) {
 function winTieLose(playerChoose, computerChoice) {
     if(playerChoose == 0) {
         if(computerChoice == 1) {
-            console.log("You Lose");
+            result.innerHTML = "You Lose";
             guestScore.innerHTML = parseInt(guestScore.innerHTML) + 1;
         }
         else if(computerChoice == 2) {
-            console.log("You win")
+            result.innerHTML = "You win";
             homeScore.innerHTML = parseInt(homeScore.innerHTML) + 1;
         }
         else {
-            console.log("Tie");
+            result.innerHTML = "Tie";
         }
     }
 
     else if(playerChoose == 1) {
         if(computerChoice == 2) {
-            console.log("You Lose");
+            result.innerHTML = "You Lose";
             guestScore.innerHTML = parseInt(guestScore.innerHTML) + 1;
         }
         else if(computerChoice == 0) {
-            console.log("You win")
+            result.innerHTML = "You win";
             homeScore.innerHTML = parseInt(homeScore.innerHTML) + 1;
         }
         else {
-            console.log("Tie");
+            result.innerHTML = "Tie";
         }
     }
 
     else if(playerChoose == 2) {
         if(computerChoice == 0) {
-            console.log("You Lose");
+            result.innerHTML = "You Lose";
             guestScore.innerHTML = parseInt(guestScore.innerHTML) + 1;
         }
         else if(computerChoice == 1) {
-            console.log("You win")
+            result.innerHTML = "You win";
             homeScore.innerHTML = parseInt(homeScore.innerHTML) + 1;
         }
         else {
-            console.log("Tie");
+            result.innerHTML = "Tie";
         }
     }
 }
