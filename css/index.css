@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(./font/RobotoMono-Regular.ttf);
+}
+
 html, body {
     font-family: 'Roboto Mono';
     font-weight: bold;
