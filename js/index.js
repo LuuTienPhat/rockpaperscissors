@@ -2,13 +2,10 @@ const rock = document.getElementById("rock");
 const scissors = document.getElementById("scissors");
 const paper = document.getElementById("paper");
 const guestGesture = document.getElementById("guest-gesture");
-const guestScore = document.getElementById("guest-score");
-const homeScore = document.getElementById("home-score");
 const result = document.getElementsByClassName("result")[0];
 
-function choose() {
-    
-}
+let guestScore = 0;
+let homeScore = 0;
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -36,11 +33,13 @@ function winTieLose(playerChoose, computerChoice) {
     if(playerChoose == 0) {
         if(computerChoice == 1) {
             result.innerHTML = "You Lose";
-            guestScore.innerHTML = parseInt(guestScore.innerHTML) + 1;
+            guestScore++;
+            document.getElementById("guest-score").innerHTML = guestScore;
         }
         else if(computerChoice == 2) {
             result.innerHTML = "You win";
-            homeScore.innerHTML = parseInt(homeScore.innerHTML) + 1;
+            homeScore++;
+            document.getElementById("home-score").innerHTML = homeScore;
         }
         else {
             result.innerHTML = "Tie";
@@ -50,11 +49,13 @@ function winTieLose(playerChoose, computerChoice) {
     else if(playerChoose == 1) {
         if(computerChoice == 2) {
             result.innerHTML = "You Lose";
-            guestScore.innerHTML = parseInt(guestScore.innerHTML) + 1;
+            guestScore++;
+            document.getElementById("guest-score").innerHTML = guestScore;
         }
         else if(computerChoice == 0) {
             result.innerHTML = "You win";
-            homeScore.innerHTML = parseInt(homeScore.innerHTML) + 1;
+            homeScore++;
+            document.getElementById("home-score").innerHTML = homeScore;
         }
         else {
             result.innerHTML = "Tie";
@@ -64,11 +65,13 @@ function winTieLose(playerChoose, computerChoice) {
     else if(playerChoose == 2) {
         if(computerChoice == 0) {
             result.innerHTML = "You Lose";
-            guestScore.innerHTML = parseInt(guestScore.innerHTML) + 1;
+            guestScore++;
+            document.getElementById("guest-score").innerHTML = guestScore;
         }
         else if(computerChoice == 1) {
             result.innerHTML = "You win";
-            homeScore.innerHTML = parseInt(homeScore.innerHTML) + 1;
+            homeScore++;
+            document.getElementById("home-score").innerHTML = homeScore;
         }
         else {
             result.innerHTML = "Tie";
